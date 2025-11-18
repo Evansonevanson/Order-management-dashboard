@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Management Dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <h1 class="header-title">Order Management Dashboard</h1>
+        <div class="header-right">
+          <div class="search-bar">
+            <input
+              type="text"
+              placeholder="Search orders..."
+              class="search-input"
+            />
+            <span class="search-icon">🔍</span>
+          </div>
+          <div class="header-actions">
+            <button class="notification-btn" aria-label="Notifications">
+              🔔
+              <span class="notification-badge">3</span>
+            </button>
+            <div class="user-profile">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%232F80ED'/%3E%3Ctext x='20' y='26' font-size='18' fill='white' text-anchor='middle' font-weight='bold'%3EJD%3C/text%3E%3C/svg%3E"
+                alt="User Avatar"
+                class="avatar"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <a href="#" class="nav-item active">
+            <span class="nav-icon">📊</span>
+            <span class="nav-label">Dashboard</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">📦</span>
+            <span class="nav-label">Orders</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">👥</span>
+            <span class="nav-label">Customers</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">🛍️</span>
+            <span class="nav-label">Products</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">📈</span>
+            <span class="nav-label">Analytics</span>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">⚙️</span>
+            <span class="nav-label">Settings</span>
+          </a>
+          <hr class="sidebar-divider" />
+          <a href="#" class="nav-item nav-logout">
+            <span class="nav-icon">🚪</span>
+            <span class="nav-label">Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Filters Section -->
+        <section class="filters-section">
+          <div class="filter-label">Filter by Status:</div>
+          <div class="filter-buttons">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Pending</button>
+            <button class="filter-btn">Shipped</button>
+            <button class="filter-btn">Cancelled</button>
+          </div>
+        </section>
+
+        <!-- Orders List -->
+        <section class="orders-section">
+          <h2 class="section-title">Recent Orders</h2>
+          <div class="orders-container">
+            <!-- Order Card 1 -->
+            <div class="order-card">
+              <div class="order-header">
+                <div class="order-id-section">
+                  <span class="order-id-label">Order ID</span>
+                  <span class="order-id">#ORD-2025-001</span>
+                </div>
+                <div class="order-date-section">
+                  <span class="order-date-label">Order Date</span>
+                  <span class="order-date">Nov 18, 2025</span>
+                </div>
+              </div>
+              <div class="order-body">
+                <div class="order-info">
+                  <div class="info-item">
+                    <span class="info-label">Customer</span>
+                    <span class="info-value">John Doe</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Items</span>
+                    <span class="info-value">3</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Total Amount</span>
+                    <span class="info-value">$249.99</span>
+                  </div>
+                </div>
+                <div class="order-status">
+                  <span class="status-badge shipped">Shipped</span>
+                  <span class="payment-status">Paid</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Card 2 -->
+            <div class="order-card">
+              <div class="order-header">
+                <div class="order-id-section">
+                  <span class="order-id-label">Order ID</span>
+                  <span class="order-id">#ORD-2025-002</span>
+                </div>
+                <div class="order-date-section">
+                  <span class="order-date-label">Order Date</span>
+                  <span class="order-date">Nov 17, 2025</span>
+                </div>
+              </div>
+              <div class="order-body">
+                <div class="order-info">
+                  <div class="info-item">
+                    <span class="info-label">Customer</span>
+                    <span class="info-value">Jane Smith</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Items</span>
+                    <span class="info-value">5</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Total Amount</span>
+                    <span class="info-value">$589.50</span>
+                  </div>
+                </div>
+                <div class="order-status">
+                  <span class="status-badge pending">Pending</span>
+                  <span class="payment-status">Paid</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Card 3 -->
+            <div class="order-card">
+              <div class="order-header">
+                <div class="order-id-section">
+                  <span class="order-id-label">Order ID</span>
+                  <span class="order-id">#ORD-2025-003</span>
+                </div>
+                <div class="order-date-section">
+                  <span class="order-date-label">Order Date</span>
+                  <span class="order-date">Nov 16, 2025</span>
+                </div>
+              </div>
+              <div class="order-body">
+                <div class="order-info">
+                  <div class="info-item">
+                    <span class="info-label">Customer</span>
+                    <span class="info-value">Mike Johnson</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Items</span>
+                    <span class="info-value">2</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Total Amount</span>
+                    <span class="info-value">$125.00</span>
+                  </div>
+                </div>
+                <div class="order-status">
+                  <span class="status-badge shipped">Shipped</span>
+                  <span class="payment-status">Paid</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Card 4 -->
+            <div class="order-card">
+              <div class="order-header">
+                <div class="order-id-section">
+                  <span class="order-id-label">Order ID</span>
+                  <span class="order-id">#ORD-2025-004</span>
+                </div>
+                <div class="order-date-section">
+                  <span class="order-date-label">Order Date</span>
+                  <span class="order-date">Nov 15, 2025</span>
+                </div>
+              </div>
+              <div class="order-body">
+                <div class="order-info">
+                  <div class="info-item">
+                    <span class="info-label">Customer</span>
+                    <span class="info-value">Sarah Williams</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Items</span>
+                    <span class="info-value">1</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Total Amount</span>
+                    <span class="info-value">$79.99</span>
+                  </div>
+                </div>
+                <div class="order-status">
+                  <span class="status-badge cancelled">Cancelled</span>
+                  <span class="payment-status">Unpaid</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Card 5 -->
+            <div class="order-card">
+              <div class="order-header">
+                <div class="order-id-section">
+                  <span class="order-id-label">Order ID</span>
+                  <span class="order-id">#ORD-2025-005</span>
+                </div>
+                <div class="order-date-section">
+                  <span class="order-date-label">Order Date</span>
+                  <span class="order-date">Nov 14, 2025</span>
+                </div>
+              </div>
+              <div class="order-body">
+                <div class="order-info">
+                  <div class="info-item">
+                    <span class="info-label">Customer</span>
+                    <span class="info-value">Robert Brown</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Items</span>
+                    <span class="info-value">4</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">Total Amount</span>
+                    <span class="info-value">$399.99</span>
+                  </div>
+                </div>
+                <div class="order-status">
+                  <span class="status-badge pending">Pending</span>
+                  <span class="payment-status">Paid</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Right Sidebar - Customer Info -->
+      <aside class="customer-sidebar">
+        <div class="customer-card">
+          <h3 class="customer-card-title">Customer Profile</h3>
+
+          <div class="customer-section">
+            <h4 class="customer-section-title">Current Customer</h4>
+            <div class="customer-avatar-large">JD</div>
+            <p class="customer-name">John Doe</p>
+            <p class="customer-meta">Premium Member</p>
+          </div>
+
+          <div class="customer-section">
+            <h4 class="customer-section-title">Contact Information</h4>
+            <div class="contact-item">
+              <span class="contact-label">Email:</span>
+              <span class="contact-value">john.doe@email.com</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Phone:</span>
+              <span class="contact-value">+1 (555) 123-4567</span>
+            </div>
+          </div>
+
+          <div class="customer-section">
+            <h4 class="customer-section-title">Shipping Address</h4>
+            <p class="address-text">
+              123 Main Street<br />New York, NY 10001<br />United States
+            </p>
+          </div>
+
+          <div class="customer-section">
+            <h4 class="customer-section-title">Recent Orders</h4>
+            <ul class="recent-orders-list">
+              <li class="recent-order-item">
+                <span class="recent-order-id">#ORD-2025-001</span>
+                <span class="recent-order-amount">$249.99</span>
+              </li>
+              <li class="recent-order-item">
+                <span class="recent-order-id">#ORD-2024-156</span>
+                <span class="recent-order-amount">$189.50</span>
+              </li>
+              <li class="recent-order-item">
+                <span class="recent-order-id">#ORD-2024-142</span>
+                <span class="recent-order-amount">$320.00</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="customer-section">
+            <h4 class="customer-section-title">Notes</h4>
+            <p class="notes-text">
+              High-value customer. Prefers expedited shipping. VIP member since
+              2023.
+            </p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
